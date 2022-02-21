@@ -7,7 +7,7 @@ import getAllKurs from "./getAllKurs.js"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 // console.log(__dirname)
-async function checker() {
+export async function checker() {
   let data = await getAllKurs()
   await fs.readFile(
     path.resolve(__dirname, "data.json"),
@@ -61,7 +61,7 @@ function getChanges(newdata, oldData) {
   else return false
 }
 
-export default function timer() {
+export function timer() {
   setInterval(() => {
       console.log('checking')
     checker()
