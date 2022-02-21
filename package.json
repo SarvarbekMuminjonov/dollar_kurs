@@ -3,15 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "app/*/*.json",
+      "logs/*.json"
+    ]
+  },
   "scripts": {
-    "dev": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@grammyjs/router": "^1.1.1",
     "dotenv": "^14.2.0",
-    "grammy": "^1.6.2"
+    "grammy": "^1.6.2",
+    "nodemon": "^2.0.15",
+    "request": "^2.88.2"
   }
 }
