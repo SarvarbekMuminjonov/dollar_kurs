@@ -1,8 +1,7 @@
-import bot from "../bot.js"
-
+import config from '../config/index.js'
 export default async function checker(ctx, next) {
   const role = await (
-    await bot.api.getChatMember(-1001766439610, ctx.chat.id)
+    await ctx.api.getChatMember(config.channelID, ctx.from.id)
   ).status
   console.log(role)
   if (role == "creator" || role == "administrator" || role == "member") {

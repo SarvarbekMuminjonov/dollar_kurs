@@ -88,7 +88,7 @@ function createPost(data) {
   <b>Янгиланди:</b> ${getDate()}
     
   <b>Биз билан бўлинг</b>
-  👉 @USDkurs_uz`
+  👉 @dollarkurs_uz`
   return bot.api.sendMessage(-1001766439610, post, {
     parse_mode: "HTML",
     disable_notification: true,
