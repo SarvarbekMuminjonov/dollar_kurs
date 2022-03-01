@@ -9,5 +9,6 @@ channelID = process.env.channelID
 export default {
     TOKEN,
     DEV_ID,
-    channelID
+    channelID,
+    apiURl
 }

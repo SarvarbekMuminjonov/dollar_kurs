@@ -1,3 +1,4 @@
+import config  from '../config/index.js'
 import fs from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
@@ -89,7 +90,7 @@ function createPost(data) {
     
   <b>Биз билан бўлинг</b>
   👉 @dollarkurs_uz`
-  return bot.api.sendMessage(-1001766439610, post, {
+  return bot.api.sendMessage(config.channelID, post, {
     parse_mode: "HTML",
     disable_notification: true,
   })
